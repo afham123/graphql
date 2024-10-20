@@ -1,0 +1,20 @@
+// get all the games
+query ExampleQuery {
+  games {
+    id title platform reviews {
+      id content rating   author {
+        id name
+      }
+    }
+  }
+}
+// get a particular game data
+query ExampleQuery($gameId: ID!) {
+  game(id: $gameId) {
+    id title platform reviews {
+      id content rating   author {
+        id name
+      }
+    }
+  }
+}
